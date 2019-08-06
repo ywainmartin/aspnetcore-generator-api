@@ -20,7 +20,7 @@ RUN dotnet restore api.UnitTest/api.UnitTest.csproj
 COPY . .
 
 #test
-
+ENV TEAMCITY_PROJECT_NAME=fake
 RUN dotnet test  api.UnitTest/api.UnitTest.csproj
 
 #publish
